@@ -98,7 +98,18 @@ Create Table Holiday_master (GRP_id int,OU_ID int,bu_id int,holiday_code nvarcha
 
 --Employee Rotational Shift  Plan  #### Combination of Shift  and weekoff (s)
 
+create table RotaP (GRP_id int,OU_ID int,bu_id int,RP_cd nvarchar(10),effective_from datetime,Effective_to datetime,active_inactive int(1)
+					,Created_by nvarchar(20),Created_date datetime,Modified_by nvarchar(20),Modified_by_date datetime )
+
+create table RotaP_DTL (GRP_id int,OU_ID int,bu_id int,RP_code nvarchar(10),u_RP_sdesc nvarchar(80), RP_sdesc nvarchar(80) ,
+					 u_RP_Ldesc nvarchar(200), RP_Ldesc nvarchar(200),active_inactive int(1),RP_WEOFF_start  nvarchar(20)
+					,Created_by nvarchar(20),Created_date datetime,Modified_by nvarchar(20),Modified_by_date datetime )
+
+
+
 --Employee Rotational Shift Schedule #### combination of Rotational shift Plan and Holidays 
+
+
 
 --Employee Flexi shift  Plan
 --Employee Flexi shift Rotational Schedule
